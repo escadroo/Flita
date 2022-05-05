@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int main(){
   int s, t;
   int i, j, k;
@@ -22,16 +23,16 @@ int main(){
     fclose(file);
 
   FILE *out;
-  out = fopen("output.dot", "w");
-  fprintf(out, "graph{\n");
-for (i = 0; i < s-1; i++){
-    fprintf(out, "%d -- %d", matrix[i][j], matrix[i][j + 1]);
-    fprintf(out, "\n");
-}
+    out = fopen("output.dot", "w");
+    fprintf(out, "graph{\n");
+    for (i = 0; i < s; i++){
+        fprintf(out, "%d -- %d", matrix[i][0], matrix[i][1]);
+        fprintf(out, "\n");
+    }
 
-fprintf(out, "}\n");
-fclose(out);
-system("dot output.dot -Tpng -o image.png");
+  fprintf(out, "}\n");
+  fclose(out);
+  system("dot output.dot -Tpng -o image.png");
 
-return (EXIT_SUCCESS);
+  return (EXIT_SUCCESS);
 }
