@@ -91,9 +91,7 @@ int main(){
             }
         }
     }
-    for (int i=0; i < out_bord){
 
-    }
     //здесь нужно дописать 
     //quicksort
     for(int k=0; k<len;k++){ //прикидываю идею
